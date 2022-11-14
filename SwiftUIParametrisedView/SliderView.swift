@@ -13,7 +13,11 @@ struct SliderView: View {
     private var value: Double = 0.3
     
     var body: some View {
-        Slider(value: $value)
+        HStack {
+            Text("Title")
+            Slider(value: $value)
+            Text(String(format: "%0.2f", value))
+        }
     }
 }
 
